@@ -2,7 +2,13 @@
 
 ### Install
 
-`pip install django-warrant`
+Add this to a Pipfile:
+
+`django-warrant = {editable = true, git = "https://github.com/dwillis/django-warrant.git"}`
+
+or:
+
+`pip install git+https://github.com/dwillis/django-warrant.git`
 
 ### Django Auth Backend
 #### Using the CognitoBackend
@@ -77,5 +83,3 @@ for the name of your custom class.
 #### API Key Middleware
 The `APIKeyMiddleware` checks for a `HTTP_AUTHORIZATION_ID` header
 in the request and attaches it to the request object as `api_key`.
-
-
