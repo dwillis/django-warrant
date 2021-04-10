@@ -3,4 +3,4 @@ django-braces>=1.11.0
 django-crispy-forms>=1.6.1
 django-extensions>=1.7.7
 warrant>=0.2.0
-six>=1.15.0
+six==1.14.0
