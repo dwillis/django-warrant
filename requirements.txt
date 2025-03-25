@@ -1,4 +1,4 @@
-Django>=2.0
+Django>=3.0
 django-braces>=1.14.0
 django-crispy-forms>=1.14.0
 django-extensions>=3.0.0
