@@ -6,11 +6,6 @@ from botocore.exceptions import ClientError
 from django.conf import settings
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth import get_user_model
-try:
-    from django.utils.six import iteritems
-except:
-    from six import iteritems
-
 from warrant import Cognito
 from .utils import cognito_to_dict
 
@@ -51,8 +46,7 @@ class CognitoUser(Cognito):
         return user
 
 
-class AbstractCognitoBackend(ModelBackend):
-    __metaclass__ = abc.ABCMeta
+class AbstractCognitoBackend(ModelBackend, metaclass=abc.ABCMeta):
 
     UNAUTHORIZED_ERROR_CODE = 'NotAuthorizedException'
 

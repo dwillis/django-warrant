@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from mock import patch, MagicMock
 from botocore.exceptions import ClientError
 from importlib import import_module
@@ -13,10 +11,6 @@ from django.contrib.sessions.middleware import SessionMiddleware
 from django.http import HttpRequest
 from django.test import override_settings, TestCase, TransactionTestCase
 from django.test.client import RequestFactory
-try:
-    from django.utils.six import iteritems
-except:
-    from six import iteritems
 
 from django_warrant.backend import CognitoBackend, CognitoUser
 from django_warrant.middleware import APIKeyMiddleware
